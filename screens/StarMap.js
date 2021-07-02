@@ -23,7 +23,10 @@ export default class StarMap extends React.Component{
 
         return(
             <View style = {{flex:1}}>
+                <View>
                 <Text style = {{fontSize:30,  textAlign:"center", marginTop:"10%",}}>Star Map</Text>
+                </View>
+                <View style = {{marginTop:5}}>
                 <TextInput
                     style = {{height:40, borderColor:"gray", borderWidth:1, marginTop:40, width:"90%", marginLeft: 20, margiinRight:20,borderRadius : 30, textAlign:"center"}}
                     placeholder="Enter your latitude"
@@ -34,6 +37,8 @@ export default class StarMap extends React.Component{
                         })
                     }}
                 />
+                </View>
+                <View>
                 <TextInput
                     style = {{height:40, borderColor:"gray", borderWidth:1, width:"90%", marginTop:20, marginLeft: 20, marginRight:20, borderRadius : 30, textAlign:"center"}}
                     placeholder="Enter your longitude"
@@ -44,11 +49,14 @@ export default class StarMap extends React.Component{
                         })
                     }}
                 />
+                </View>
+                <View>
                 <WebView
                     scalesPageToFit={true}
                     source = {{uri: path}}
                     style = {{marginTop:20, marginBottom:20, flex: 1}}
                 />
+                </View>
             </View>
             
         )
